@@ -150,7 +150,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 93073199}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e51735fae09f4564794171ea79686535, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 1870258652}
   - component: {fileID: 1870258651}
   - component: {fileID: 1870258650}
+  - component: {fileID: 1870258654}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -400,7 +401,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1870258649}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e51735fae09f4564794171ea79686535, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -503,6 +504,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1870258654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870258649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd7c5059b1b66940859738a535dfc05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigidBody: {fileID: 1870258650}
+  friction: {x: 0.1, y: 0}
+  velocity: {x: 30, y: 0}
+  speed: 5
+  forceJump: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
