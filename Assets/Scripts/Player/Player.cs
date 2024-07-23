@@ -16,6 +16,11 @@ public class Player : MonoBehaviour
 
     private float _currentSpeed;
 
+    [Header("Player anim")]
+    public string boolRun = "Run";
+    public Animator animator;
+
+
     //private bool _isRunning = false;
 
     private void Update()
@@ -38,10 +43,16 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             myRigidBody.velocity = new Vector2(-_currentSpeed, myRigidBody.velocity.y);
+            animator.SetBool(boolRun, true);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             myRigidBody.velocity = new Vector2(_currentSpeed, myRigidBody.velocity.y);
+            animator.SetBool(boolRun, true);
+        }
+        else
+        {
+            animator.SetBool(boolRun, false);
         }
 
         if(myRigidBody.velocity.x > 0)
