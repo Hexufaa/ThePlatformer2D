@@ -1582,6 +1582,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1368888902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9178863394227415163, guid: fe01d2cb6d60aa34397c425c857effea, type: 3}
+  m_PrefabInstance: {fileID: 7570764989491268549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1368888908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368888902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667c168ebb8a3184c8de82303eaa1444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLife: 4
+  destroyOnKill: 1
 --- !u!4 &1377879741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6421870051972949727, guid: dc84dabd75c01d94aba17be82a2df3aa, type: 3}
@@ -1911,6 +1930,7 @@ MonoBehaviour:
   speed: 5
   forceJump: 20
   boolRun: Run
+  triggerDeath: Death
   animator: {fileID: 1280658921}
 --- !u!114 &1870258655
 MonoBehaviour:
@@ -1924,8 +1944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667c168ebb8a3184c8de82303eaa1444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLife: 10
-  destroyOnKill: 0
+  startLife: 30
+  destroyOnKill: 1
 --- !u!1 &2088351477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,7 +2131,7 @@ MonoBehaviour:
   prefabProjectile: {fileID: 5744666384897194471, guid: 1cd2c3ecf055a1449b24a70a70b70f93, type: 3}
   positionToShoot: {fileID: 1761716080}
   timeBetweenShoot: 0.3
-  playerSideReference: {fileID: 1280658920}
+  playerSideReference: {fileID: 1870258653}
 --- !u!1 &2136006778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,13 +2255,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136006778}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.85, y: -9.6, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.050255056, w: 0.99873644}
+  m_LocalPosition: {x: -33.31, y: -8.68, z: 0}
   m_LocalScale: {x: 41, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1524653132}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.761}
 --- !u!1001 &343824029632024786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2359,6 +2379,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8981579063967192503, guid: fe01d2cb6d60aa34397c425c857effea, type: 3}
+      propertyPath: healthBase
+      value: 
+      objectReference: {fileID: 1368888908}
+    - target: {fileID: 8981579063967192503, guid: fe01d2cb6d60aa34397c425c857effea, type: 3}
+      propertyPath: triggerKill
+      value: death
+      objectReference: {fileID: 0}
     - target: {fileID: 9178863394227415163, guid: fe01d2cb6d60aa34397c425c857effea, type: 3}
       propertyPath: m_Name
       value: enemy
@@ -2366,7 +2394,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9178863394227415163, guid: fe01d2cb6d60aa34397c425c857effea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1368888908}
   m_SourcePrefab: {fileID: 100100000, guid: fe01d2cb6d60aa34397c425c857effea, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

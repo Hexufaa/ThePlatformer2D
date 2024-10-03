@@ -18,7 +18,9 @@ public class Player : MonoBehaviour
 
     [Header("Player anim")]
     public string boolRun = "Run";
+    public string triggerDeath = "Death";
     public Animator animator;
+    private HealthBase healthBase;
 
     //private bool _isRunning = false;
 
@@ -28,11 +30,19 @@ public class Player : MonoBehaviour
         HandleJump();
     }
 
-        
+    private void Awake()
+    {
+        if(healthBase != null)
+        {
+            healthBase.OnKill += OnPlayerKill;
+            animator.SetTrigger(triggerDeath);
+        }
+    }
 
-// to do: add the flip to the player
-
-
+    private void OnPlayerKill()
+    {
+        healthBase.OnKill -= OnPlayerKill;
+    }
 
     private void HandleMovement()
     {
