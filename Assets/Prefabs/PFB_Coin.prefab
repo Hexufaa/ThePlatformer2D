@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6421870051972949727}
   - component: {fileID: -6746647611420938520}
   - component: {fileID: 7254814089767576129}
+  - component: {fileID: -6056498201481379928}
   m_Layer: 0
   m_Name: PFB_Coin
   m_TagString: Untagged
@@ -89,6 +90,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc2a88f7fcada9d4cb8ce4c80d610493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  compareTag: Player
+--- !u!114 &-6056498201481379928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796902941760838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4896de976d9496848a006214653798f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player

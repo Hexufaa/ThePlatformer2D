@@ -7,7 +7,7 @@ public class ItemCollectableCoin : ItemCollectableBase
 
     protected override void Collect()
     {
-        base.Collect();
+        base.OnCollect();
         ItemManager.Instance.AddCoins();
     }
 
