@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
+    [Header("Setup")]
+    public EnemySetup enemysetup;
 
     public int damage = 10;
-
 
     public HealthBase healthBase;
     public Animator animator;
@@ -15,7 +16,10 @@ public class EnemyBase : MonoBehaviour
 
     private void Awake()
     {
-        if(healthBase != null)
+
+        //int damage = enemysetup.damage;
+
+        if (healthBase != null)
         {
             healthBase.OnKill += OnEnemyKill;
         }

@@ -8,12 +8,14 @@ public class Player : MonoBehaviour
     public Rigidbody2D myRigidBody;
 
     public Vector2 friction = new Vector2(.1f, 0);
+    public PlayerSetup playerSetup;
 
-    public float speedRun;
+    /*public float speedRun;
     public float speed;
-    public float forceJump = 2;
+    public float forceJump = 2;*/
     private float _currentSpeed;
 
+    //public SOFloat forceJump;
 
 
     [Header("Player anim")]
@@ -48,11 +50,11 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.X))
         {
-            _currentSpeed = speedRun;
+            _currentSpeed = playerSetup.speedRun;
         }
         else
         {
-            _currentSpeed = speed;
+            _currentSpeed = playerSetup.speed;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -93,7 +95,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            myRigidBody.velocity = Vector2.up * forceJump;
+            myRigidBody.velocity = Vector2.up * playerSetup.forceJump;
         }
     }
 
