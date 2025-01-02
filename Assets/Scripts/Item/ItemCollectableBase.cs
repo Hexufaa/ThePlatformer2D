@@ -8,7 +8,7 @@ public class ItemCollectableBase : MonoBehaviour
     
     public string compareTag = "Player";
     public float timeToHide = 3f;
-    public ParticleSystem particleSystem;
+    public ParticleSystem coinCollect;
     public GameObject graphicItem;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +29,7 @@ public class ItemCollectableBase : MonoBehaviour
         if (graphicItem != null)
         { graphicItem.SetActive(false); }
         Invoke(nameof(HideObject), timeToHide);
-        if (particleSystem != null) particleSystem.Play();
+        if (coinCollect != null) coinCollect.Play();
     }
 
     private void HideObject()

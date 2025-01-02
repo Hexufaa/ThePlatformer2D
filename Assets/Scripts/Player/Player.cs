@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public string triggerDeath = "Death";
     public Animator animator;
     private HealthBase healthBase;
+    public ParticleSystem jumpVFX;
 
     //private bool _isRunning = false;
 
@@ -30,6 +31,11 @@ public class Player : MonoBehaviour
     {
         HandleMovement();
         HandleJump();
+    }
+
+    private void PlayJumpVFX() 
+    {
+        if (jumpVFX != null) jumpVFX.Play();
     }
 
     private void Awake()
@@ -96,7 +102,9 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             myRigidBody.velocity = Vector2.up * playerSetup.forceJump;
+            PlayJumpVFX();
         }
+
     }
 
 }

@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2417257388862996204}
-  - {fileID: 2927724097610032069}
+  - {fileID: 5732043806135772007}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &-6746647611420938520
@@ -93,9 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
-  particleSystem: {fileID: 9208137138138176860, guid: e84d5759f512dc1439cb2d2d3556a37d, type: 3}
-  timeToHide: 5
-  graphicItem: {fileID: 3796902941760838}
+  timeToHide: 1
+  coinCollect: {fileID: 1743885939668306140}
+  graphicItem: {fileID: 9055586489743957478}
 --- !u!1 &9055586489743957478
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &60598499701576994
+--- !u!1001 &7492398741311493504
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -190,15 +190,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2915543705924925159, guid: e84d5759f512dc1439cb2d2d3556a37d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.85
+      value: 0.823
       objectReference: {fileID: 0}
     - target: {fileID: 2915543705924925159, guid: e84d5759f512dc1439cb2d2d3556a37d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.144
       objectReference: {fileID: 0}
     - target: {fileID: 2915543705924925159, guid: e84d5759f512dc1439cb2d2d3556a37d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.08056308
       objectReference: {fileID: 0}
     - target: {fileID: 2915543705924925159, guid: e84d5759f512dc1439cb2d2d3556a37d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -230,15 +230,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8940817267697983644, guid: e84d5759f512dc1439cb2d2d3556a37d, type: 3}
       propertyPath: m_Name
-      value: PFB_ParticleSystem
+      value: PFB_ParticleSystemCoin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e84d5759f512dc1439cb2d2d3556a37d, type: 3}
---- !u!4 &2927724097610032069 stripped
+--- !u!198 &1743885939668306140 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9208137138138176860, guid: e84d5759f512dc1439cb2d2d3556a37d, type: 3}
+  m_PrefabInstance: {fileID: 7492398741311493504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5732043806135772007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2915543705924925159, guid: e84d5759f512dc1439cb2d2d3556a37d, type: 3}
-  m_PrefabInstance: {fileID: 60598499701576994}
+  m_PrefabInstance: {fileID: 7492398741311493504}
   m_PrefabAsset: {fileID: 0}
