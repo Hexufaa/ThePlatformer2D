@@ -7,9 +7,12 @@ public class ItemCollectableBase : MonoBehaviour
 {
     
     public string compareTag = "Player";
-    public float timeToHide = 3f;
+    public float timeToHide = 1.8f;
     public ParticleSystem coinCollect;
     public GameObject graphicItem;
+
+    [Header("Sounds")]
+    public AudioSource audioSource;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,12 +33,20 @@ public class ItemCollectableBase : MonoBehaviour
         { graphicItem.SetActive(false); }
         Invoke(nameof(HideObject), timeToHide);
         if (coinCollect != null) coinCollect.Play();
+
+        //AUDIO
+        if (coinCollect != null) coinCollect.Play();
+        if (audioSource != null) audioSource.Play();
+
     }
 
     private void HideObject()
     {
         gameObject.SetActive(false);
     }
-    
+
+ 
+
+
 
 }
